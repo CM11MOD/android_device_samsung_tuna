@@ -97,6 +97,9 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 # Enable PLD prefetch support and 32 bit cacheline flag
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=32
 
+# ODEX optimization
+WITH_DEXPREOPT := true
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
