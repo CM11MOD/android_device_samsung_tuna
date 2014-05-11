@@ -56,7 +56,8 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
-	audio.usb.default
+	audio.usb.default \
+	audio.r_submix.default
 
 PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
