@@ -76,6 +76,9 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #	keystore.tuna
 
+PRODUCT_PACKAGES += \
+    Mira4U
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     device/samsung/tuna/init.tuna.rc:root/init.tuna.rc \
