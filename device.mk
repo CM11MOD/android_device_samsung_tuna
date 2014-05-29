@@ -86,7 +86,8 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/system/etc/gps.conf:system/etc/gps.conf
+	$(DEVICE_FOLDER)/gps/gps.conf:system/etc/gps.conf \
+	$(DEVICE_FOLDER)/gps/xtra.bin:system/etc/gps/xtra.bin
 
 # Media profiles
 PRODUCT_COPY_FILES += \
