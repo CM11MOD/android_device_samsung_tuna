@@ -213,6 +213,13 @@ PRODUCT_PACKAGES += \
 	e2fsck \
 	setup_fs
 
+# F2FS filesystem
+PRODUCT_PACKAGES += \
+        mkfs.f2fs \
+        fsck.f2fs \
+        fibmap.f2fs \
+        f2fstat
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/nxp/pn544/nxp-pn544-fw-vendor.mk)
