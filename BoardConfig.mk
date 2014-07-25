@@ -38,6 +38,7 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := cortex-a9
+TARGET_FPU_VARIANT := neon-fp16
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 
