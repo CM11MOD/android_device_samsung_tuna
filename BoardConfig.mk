@@ -72,6 +72,9 @@ COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 # set if the target supports FBIO_WAITFORVSYNC
 TARGET_HAS_WAITFORVSYNC := true
 
+# Assign Duncati H264 Profile
+BOARD_USE_TI_DUCATI_H264_PROFILE := true
+
 # use the new recovery.fstab format
 RECOVERY_FSTAB_VERSION=2
 
