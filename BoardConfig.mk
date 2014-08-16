@@ -51,10 +51,8 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 # Define kernel config for inline building
 TARGET_KERNEL_CONFIG := tuna_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/tuna
-#TARGET_PREBUILT_KERNEL := device/samsung/tuna/zImage
+TARGET_PREBUILT_KERNEL := device/samsung/tuna/zImage
 HAS_PREBUILT_KERNEL := true
-
-TARGET_PREBUILT_KERNEL := device/samsung/tuna/kernel
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := omap4
