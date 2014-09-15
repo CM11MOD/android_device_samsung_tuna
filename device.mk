@@ -137,6 +137,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/prebuilt/system/usr/idc/Melfas_MMSxxx_Touchscreen.idc:system/usr/idc/Melfas_MMSxxx_Touchscreen.idc
 
+# 4.1 Duncati Blobs (workaround H264 hardware decode issure)
+PRODUCT_COPY_FILES += \
+	$(DEVICE_FOLDER)/prebuilt/system/vendor/firmware/ducati-m3.bin:system/vendor/firmware/ducati-m3.bin
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
