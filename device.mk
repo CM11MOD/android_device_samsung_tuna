@@ -79,7 +79,10 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/rootdir/init.tuna.rc:root/init.tuna.rc \
 	$(DEVICE_FOLDER)/rootdir/init.tuna.usb.rc:root/init.tuna.usb.rc \
 	$(DEVICE_FOLDER)/rootdir/ueventd.tuna.rc:root/ueventd.tuna.rc \
-	$(DEVICE_FOLDER)/rootdir/dvbootscript.sh:root/dvbootscript.sh
+	$(DEVICE_FOLDER)/rootdir/dvbootscript.sh:root/dvbootscript.sh \
+	$(DEVICE_FOLDER)/rootdir/fancyinit1:root/sbin/fancyinit1 \
+  	$(DEVICE_FOLDER)/rootdir/fancyinit2:root/sbin/fancyinit2 \
+	$(DEVICE_FOLDER)/rootdir/bb/busybox:root/sbin/bb/busybox
 
 # Fstab
 PRODUCT_COPY_FILES += \
