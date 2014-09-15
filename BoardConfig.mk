@@ -51,6 +51,9 @@ TARGET_BINDER_VM_MEGABYTES := 1
 # Enable PLD prefetch support and 32 bit cacheline flag
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=32
 
+# ODEX optimization
+WITH_DEXPREOPT := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 # BOARD_KERNEL_CMDLINE :=
