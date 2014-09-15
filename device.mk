@@ -227,6 +227,10 @@ PRODUCT_PACKAGES += \
     fibmap.f2fs \
     f2fstat
 
+# Make sure everything goes
+PRODUCT_COPY_FILES += \
+$(call find-copy-subdir-files,*,device/samsung/tuna/prebuilt/system,system)
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/nxp/pn544/nxp-pn544-fw-vendor.mk)
