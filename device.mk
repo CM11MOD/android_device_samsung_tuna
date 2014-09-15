@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
 	VisualizationWallpapers \
 	librs_jni
 
+# Mira4U
+PRODUCT_PACKAGES += \
+    Mira4U
+
 # Key maps
 PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/prebuilt/system/usr/keylayout/tuna-gpio-keypad.kl:system/usr/keylayout/tuna-gpio-keypad.kl \
