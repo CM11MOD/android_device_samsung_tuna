@@ -23,6 +23,12 @@ DEVICE_FOLDER := device/samsung/tuna
 
 DEVICE_PACKAGE_OVERLAYS := $(DEVICE_FOLDER)/overlay
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := $(DEVICE_FOLDER)/zImage
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
 # we do this little trick to fall back to the hdpi version
@@ -68,6 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Init files
 PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel \
 	$(DEVICE_FOLDER)/rootdir/init.tuna.rc:root/init.tuna.rc \
 	$(DEVICE_FOLDER)/rootdir/init.tuna.usb.rc:root/init.tuna.usb.rc \
 	$(DEVICE_FOLDER)/rootdir/ueventd.tuna.rc:root/ueventd.tuna.rc
