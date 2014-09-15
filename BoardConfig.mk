@@ -85,7 +85,7 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_tuna
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/tuna
 
-TARGET_RECOVERY_FSTAB = device/samsung/tuna/fstab.tuna
+TARGET_RECOVERY_FSTAB = device/samsung/tuna/root/fstab.tuna
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_SETS_FSTAB := true
