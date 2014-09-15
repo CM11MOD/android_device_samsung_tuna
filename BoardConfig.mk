@@ -75,7 +75,7 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/zImage
 HAS_PREBUILT_KERNEL := true
 
 # EGL
-BOARD_EGL_CFG := $(DEVICE_FOLDER)/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := $(DEVICE_FOLDER)/prebuilt/system/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Include HDCP keys
