@@ -53,8 +53,8 @@ PRODUCT_PACKAGES += \
 	audio.usb.default
 
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
-	$(DEVICE_FOLDER)/prebuilt/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
+	$(DEVICE_FOLDER)/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+	$(DEVICE_FOLDER)/prebuilt/system/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
 	tuna_hdcp_keys
@@ -78,12 +78,12 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/etc/gps.conf:system/etc/gps.conf
+	$(DEVICE_FOLDER)/prebuilt/system/etc/gps.conf:system/etc/gps.conf
 
 # Media profiles
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
-	$(DEVICE_FOLDER)/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
+	$(DEVICE_FOLDER)/prebuilt/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
+	$(DEVICE_FOLDER)/prebuilt/system/etc/media_codecs.xml:system/etc/media_codecs.xml
 
 # Wifi
 ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)
@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_PREBUILT_WIFI_MODULE):system/lib/modules/bcmdhd.ko
 endif
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+	$(DEVICE_FOLDER)/prebuilt/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	wifi.interface=wlan0
@@ -118,16 +118,16 @@ PRODUCT_PACKAGES += \
 
 # Key maps
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/usr/keylayout/tuna-gpio-keypad.kl:system/usr/keylayout/tuna-gpio-keypad.kl \
-	$(DEVICE_FOLDER)/prebuilt/usr/keychars/tuna-gpio-keypad.kcm:system/usr/keychars/tuna-gpio-keypad.kcm \
-	$(DEVICE_FOLDER)/prebuilt/usr/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-	$(DEVICE_FOLDER)/prebuilt/usr/keychars/sec_jack.kcm:system/usr/keychars/sec_jack.kcm \
-	$(DEVICE_FOLDER)/prebuilt/usr/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl \
-	$(DEVICE_FOLDER)/prebuilt/usr/keychars/sii9234_rcp.kcm:system/usr/keychars/sii9234_rcp.kcm
+	$(DEVICE_FOLDER)/prebuilt/system/usr/keylayout/tuna-gpio-keypad.kl:system/usr/keylayout/tuna-gpio-keypad.kl \
+	$(DEVICE_FOLDER)/prebuilt/system/usr/keychars/tuna-gpio-keypad.kcm:system/usr/keychars/tuna-gpio-keypad.kcm \
+	$(DEVICE_FOLDER)/prebuilt/system/usr/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+	$(DEVICE_FOLDER)/prebuilt/system/usr/keychars/sec_jack.kcm:system/usr/keychars/sec_jack.kcm \
+	$(DEVICE_FOLDER)/prebuilt/system/usr/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl \
+	$(DEVICE_FOLDER)/prebuilt/system/usr/keychars/sii9234_rcp.kcm:system/usr/keychars/sii9234_rcp.kcm
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/usr/idc/Melfas_MMSxxx_Touchscreen.idc:system/usr/idc/Melfas_MMSxxx_Touchscreen.idc
+	$(DEVICE_FOLDER)/prebuilt/system/usr/idc/Melfas_MMSxxx_Touchscreen.idc:system/usr/idc/Melfas_MMSxxx_Touchscreen.idc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -151,12 +151,12 @@ PRODUCT_COPY_FILES += \
 
 # Melfas touchscreen firmware
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/vendor/firmware/mms144_ts_rev31.fw:system/vendor/firmware/mms144_ts_rev31.fw \
-	$(DEVICE_FOLDER)/prebuilt/vendor/firmware/mms144_ts_rev32.fw:system/vendor/firmware/mms144_ts_rev32.fw
+	$(DEVICE_FOLDER)/prebuilt/system/vendor/firmware/mms144_ts_rev31.fw:system/vendor/firmware/mms144_ts_rev31.fw \
+	$(DEVICE_FOLDER)/prebuilt/system/vendor/firmware/mms144_ts_rev32.fw:system/vendor/firmware/mms144_ts_rev32.fw
 
 # Portrait dock image
 PRODUCT_COPY_FILES += \
-	$(DEVICE_FOLDER)/prebuilt/vendor/res/images/dock/dock.png:system/vendor/res/images/dock/dock.png
+	$(DEVICE_FOLDER)/prebuilt/system/vendor/res/images/dock/dock.png:system/vendor/res/images/dock/dock.png
 
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
@@ -174,9 +174,9 @@ PRODUCT_COPY_FILES += \
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-	NFCEE_ACCESS_PATH := $(DEVICE_FOLDER)/prebuilt/etc/nfcee_access.xml
+	NFCEE_ACCESS_PATH := $(DEVICE_FOLDER)/prebuilt/system/etc/nfcee_access.xml
 else
-	NFCEE_ACCESS_PATH := $(DEVICE_FOLDER)/prebuilt/etc/nfcee_access_debug.xml
+	NFCEE_ACCESS_PATH := $(DEVICE_FOLDER)/prebuilt/system/etc/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
 	$(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
