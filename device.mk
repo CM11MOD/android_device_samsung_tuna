@@ -235,6 +235,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 $(call find-copy-subdir-files,*,device/samsung/tuna/prebuilt/system,system)
 
+# Recovery
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.cwm.forbid_format=/factory,/boot,/sbl,/xloader
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/nxp/pn544/nxp-pn544-fw-vendor.mk)
