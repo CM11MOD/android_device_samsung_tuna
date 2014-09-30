@@ -80,9 +80,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/tuna/root/fstab.tuna:root/fstab.tuna \
     device/samsung/tuna/root/ueventd.tuna.rc:root/ueventd.tuna.rc \
     device/samsung/tuna/root/dvbootscript.sh:root/sbin/dvbootscript.sh \
-    device/samsung/tuna/root/init1:root/sbin/fancyinit1 \
-    device/samsung/tuna/root/init2:root/sbin/fancyinit2 \
-    device/samsung/tuna/root/bb/busybox:root/sbin/bb/busybox \
     device/samsung/tuna/media_profiles.xml:system/etc/media_profiles.xml \
     device/samsung/tuna/media_codecs.xml:system/etc/media_codecs.xml \
 	device/samsung/tuna/gps/gps.conf:system/etc/gps.conf \
